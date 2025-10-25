@@ -1,5 +1,7 @@
 package com.rolfandco.flagration;
 
+import com.rolfandco.flagration.block.ModBlocks;
+import com.rolfandco.flagration.item.ModCreativeModeTab;
 import com.rolfandco.flagration.item.ModItems;
 import net.minecraft.client.Minecraft;
 import org.slf4j.Logger;
@@ -53,7 +55,7 @@ public class Flagration {
         modEventBus.addListener(this::commonSetup);
 
         // Register the Deferred Register to the mod event bus so blocks get registered
-        BLOCKS.register(modEventBus);
+        ModBlocks.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
         ModItems.register(modEventBus);
 
@@ -62,7 +64,7 @@ public class Flagration {
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-
+        ModCreativeModeTab.register(modEventBus);
         // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }

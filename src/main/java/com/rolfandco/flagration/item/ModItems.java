@@ -13,7 +13,7 @@ public class ModItems {
     public static final DeferredItem<Item> SCORCHED_IRON_INGOT = ITEMS.register("scorched_iron_ingot",
             () -> new Item(new Item.Properties()));
 
-    public static void register (IEventBus eventbus){
+    public static void register (IEventBus eventbus) {
         ITEMS.register(eventbus);
     }
 }

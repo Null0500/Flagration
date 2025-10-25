@@ -1,3 +1,7 @@
 {
-  "item.flagration.scorched_iron_ingot": "Scorched Iron Ingot"
+  "item.flagration.scorched_iron_ingot": "Scorched Iron Ingot",
+
+  "block.flagration.scorched_iron_block": "Block of Scorched Iron",
+
+  "creativetab.flagration.flagration": "Flagration"
 }
