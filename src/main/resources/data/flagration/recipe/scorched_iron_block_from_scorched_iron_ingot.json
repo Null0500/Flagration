@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "xxx",
+    "xxx",
+    "xxx"
+  ],
+  "key": {
+    "x": {
+      "item": "flagration:scorched_iron_ingot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "flagration:scorched_iron_block"
+  }
+}
