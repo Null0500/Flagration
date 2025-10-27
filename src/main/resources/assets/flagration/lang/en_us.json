@@ -1,7 +1,8 @@
 {
-  "item.flagration.scorched_iron_ingot": "Scorched Iron Ingot",
+  "item.velocitas.scorched_iron_ingot": "Scorched Iron Ingot",
+  "item.velocitas.lucky_core": "Lucky Core",
 
-  "block.flagration.scorched_iron_block": "Block of Scorched Iron",
+  "block.velocitas.scorched_iron_block": "Block of Scorched Iron",
 
-  "creativetab.flagration.flagration": "Flagration"
+  "creativetab.velocitas.velocitas": "Velocitas"
 }

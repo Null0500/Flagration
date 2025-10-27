@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "velocitas:scorched_iron_block"
+        }
+      ]
+    }
+  ],
+  "random_sequence": "velocitas:scorched_iron_block"
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " a ",
+    "axa",
+    " a "
+  ],
+  "key": {
+    "x": {
+      "item": "minecraft:emerald_block"
+    },
+    "a": {
+      "item": "minecraft:cornflower"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "velocitas:lucky_core"
+  }
+}

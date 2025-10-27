@@ -21,13 +21,13 @@ license="MIT"
 [[mods]] #mandatory
 
 # The modid of the mod
-modId="flagration" #mandatory
+modId="velocitas" #mandatory
 
 # The version number of the mod
 version="0.0.1" #mandatory
 
 # A display name for the mod
-displayName="Flagration" #mandatory
+displayName="Velocitas" #mandatory
 
 # A URL to query for updates for this mod. See the JSON update specification https://docs.neoforged.net/docs/misc/updatechecker/
 #updateJSONURL="https://change.me.example.invalid/updates.json" #optional
@@ -42,10 +42,10 @@ displayName="Flagration" #mandatory
 #credits="" #optional
 
 # A text field displayed in the mod UI
-authors="${mod_authors}" #optional
+authors="Rolf" #optional
 
 # The description text for the mod (multi line!) (#mandatory)
-description='''${mod_description}'''
+description='''idek what im doing dear lord help me'''
 
 # The [[mixins]] block allows you to declare your mixin config to FML so that it gets loaded.
 #[[mixins]]

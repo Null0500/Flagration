@@ -1,4 +1,4 @@
 {
   "parent": "minecraft:block/cube_all",
-  "textures": {"all": "flagration:block/scorched_iron_block"}
+  "textures": {"all": "velocitas:block/scorched_iron_block"}
 }

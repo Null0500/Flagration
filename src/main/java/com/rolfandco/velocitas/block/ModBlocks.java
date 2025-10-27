@@ -1,7 +1,7 @@
-package com.rolfandco.flagration.block;
+package com.rolfandco.velocitas.block;
 
-import com.rolfandco.flagration.Flagration;
-import com.rolfandco.flagration.item.ModItems;
+import com.rolfandco.velocitas.Velocitas;
+import com.rolfandco.velocitas.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -14,11 +14,12 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.function.Supplier;
 
 public class ModBlocks {
-    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Flagration.MODID);
+    public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Velocitas.MODID);
 
     public static final DeferredBlock<Block> SCORCHED_IRON_BLOCK = registerBlock("scorched_iron_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK).destroyTime(20)));
+                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK).destroyTime(20))
+    );
 
 
 

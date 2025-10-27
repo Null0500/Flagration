@@ -7,11 +7,11 @@
   ],
   "key": {
     "x": {
-      "item": "flagration:scorched_iron_ingot"
+      "item": "velocitas:scorched_iron_ingot"
     }
   },
   "result": {
     "count": 1,
-    "id": "flagration:scorched_iron_block"
+    "id": "velocitas:scorched_iron_block"
   }
 }

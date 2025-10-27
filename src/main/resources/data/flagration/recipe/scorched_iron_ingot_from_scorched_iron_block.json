@@ -1,8 +1,8 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "ingredients": [{"item": "flagration:scorched_iron_block"}],
+  "ingredients": [{"item": "velocitas:scorched_iron_block"}],
   "result": {
     "count": 9,
-    "id": "flagration:scorched_iron_ingot"
+    "id": "velocitas:scorched_iron_ingot"
   }
 }

@@ -1,4 +1,4 @@
-package com.rolfandco.flagration;
+package com.rolfandco.velocitas;
 
 import java.util.List;
 
