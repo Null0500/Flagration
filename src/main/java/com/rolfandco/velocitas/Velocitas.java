@@ -23,7 +23,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 @Mod(Velocitas.MODID)
 public class Velocitas {
     // Define mod id in a common place for everything to reference
-    public static final String MODID = "flagration";
+    public static final String MODID = "velocitas";
     // Directly reference a slf4j logger
     public static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
@@ -36,21 +36,15 @@ public class Velocitas {
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public Velocitas(IEventBus modEventBus, ModContainer modContainer) {
-        // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        // Register the Deferred Register to the mod event bus so blocks get registered
         ModBlocks.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
         ModItems.register(modEventBus);
-
-        // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
         ModCreativeModeTab.register(modEventBus);
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
     }
 

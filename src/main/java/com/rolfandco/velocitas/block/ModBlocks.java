@@ -18,7 +18,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> SCORCHED_IRON_BLOCK = registerBlock("scorched_iron_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(4f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK).destroyTime(20))
+                    .strength(2f).requiresCorrectToolForDrops().sound(SoundType.NETHERITE_BLOCK).destroyTime(10))
     );
 
 

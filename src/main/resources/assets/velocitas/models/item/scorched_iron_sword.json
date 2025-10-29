@@ -1,0 +1,6 @@
+{
+  "parent":  "minecraft:item/generated",
+  "textures": {
+    "layer0": "velocitas:item/scorched_iron_sword"
+  }
+}

@@ -3,12 +3,15 @@ package com.rolfandco.velocitas.item.custom;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.ExperienceOrb;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
-import org.jetbrains.annotations.NotNull;
+import net.minecraft.world.phys.Vec3;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 
 import java.util.Random;
 
@@ -17,24 +20,22 @@ public class LuckyCoreItem extends Item {
         super(properties);
     }
 
-    @Override
-    public @NotNull InteractionResult useOn(UseOnContext context) {
-        Level level = context.getLevel();
-        Block clickedBlock = level.getBlockState(context.getClickedPos()).getBlock();
+    @SubscribeEvent
+    public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {
+        Level level = event.getLevel();
+        Player player = event.getEntity();
+        ItemStack stack = event.getItemStack();
+        Block block = level.getBlockState(event.getPos()).getBlock();
 
-        // Random XP between 1 and 50 (exclusive)
-        int randXpAward = new Random().nextInt(49) + 1;
-
-        if (clickedBlock == Blocks.GRINDSTONE) {
-            if (!level.isClientSide) {
-                // Consume one item from the stack
-                context.getItemInHand().shrink(1);
-
-                ExperienceOrb.award((ServerLevel) level, context.getClickedPos().getCenter(), randXpAward);
+        if (block == Blocks.GRINDSTONE && stack.getItem() instanceof LuckyCoreItem) {
+            if (!level.isClientSide && level instanceof ServerLevel serverLevel) {
+                stack.shrink(1);
+                ExperienceOrb.award(serverLevel, Vec3.atCenterOf(event.getPos()), new Random().nextInt(49) + 1);
             }
-            return InteractionResult.SUCCESS;
+            event.setCanceled(true); // Prevents GUI from opening
+            event.setCancellationResult(InteractionResult.SUCCESS);
         }
-
-        return InteractionResult.PASS;
     }
+
+
 }
